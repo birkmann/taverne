@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Diogenes';
+	src: url('../font/diogenes.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
 body {
 	margin: 0;
 	font: 16px/1.6em sans-serif;
@@ -20,6 +25,12 @@ body {
 	box-sizing: border-box;
 }
 
+.container {
+	max-width: 1600px;
+	width: 100%;
+	margin: 0 auto;
+}
+
 .img-r {
 	max-width: 100%;
 	height: auto;
@@ -34,4 +45,221 @@ body {
 	-moz-transition: none !important;
 	-ms-transition: none !important;
 	-o-transition: none !important;
+}
+
+a.logo {
+	font-family: 'Diogenes';
+	text-decoration: none;
+	color: #111;
+	margin: 20px;
+	text-transform: uppercase;
+	display: flex;
+	transform: scale(0.8);
+}
+
+a.logo .icon {
+	margin-right: 10px;
+}
+
+a.logo .icon img {
+	width: 55px;
+	height: auto;
+}
+
+a.logo .text .main {
+	font-size: 3.5em;
+	line-height: 1em;
+	display: block;
+}
+
+a.logo .text .sub {
+	font-size: 1.25em;
+	line-height: 1em;
+	display: block;
+	margin-left: -5px;
+	margin-top: -5px;
+}
+
+header.main {
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	transition: background 0.25s ease-in-out;
+}
+
+header.main .container {
+	display: flex;
+	width: 100%;
+	max-width: 100%;
+}
+
+body.scrolled header.main {
+	background: #fff;
+}
+
+
+@media (min-width: 960px) {
+	header.main nav.main {
+		margin-left: auto;
+	}
+}
+
+.wave {
+	position: relative;
+	background-image: url(../img/wave.svg), url(../img/wave.svg);
+	background-repeat: repeat-x;
+	background-size: 35px 35px; 
+	background-position: top, bottom;
+	width: 100%;
+	height: 35px;
+	background-color: #fff;
+}
+
+header.main nav.main a {
+	font-family: 'Diogenes';
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: inline-block;
+	text-decoration: none;
+	line-height: 80px;
+	padding: 20px;
+	color: #222;
+	font-size: 1.5em;
+}
+
+header.main nav.main a:hover {
+	color: #0D5EAF;
+}
+
+.emotion {
+	min-height: 600px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background-image: url("../img/web/27.jpg");
+	background-image: url("https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.emotion:before {
+	content: "";
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 82%);
+}
+
+@media (min-width: 960px) {
+	.emotion {
+		height: 80vh;
+		min-height: 600px;
+	}
+}
+
+.emotion .text {
+	position: relative;
+	z-index: 1;
+}
+
+.emotion .bg {
+	transition: all 0.25s ease-in-out;
+}
+
+/*
+.emotion .bg:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80vh;
+	min-height: 600px;
+	opacity: 1;
+}
+*/
+
+.welcome {
+	text-align: center;
+	padding: 50px 0;
+	font-size: 1.25em;
+	line-height: 1.6em;
+}
+
+.welcome img {
+	width: 50px;
+	height: auto;
+}
+
+.welcome p {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.intro {
+	display: flex;
+	background: #0D5EAF;
+	color: #fff;
+}
+
+.intro h2 {
+	line-height: 1.4em;
+	font-weight: normal;
+}
+
+.intro .bgc {
+	position: relative;
+}
+
+.intro .bgc {
+	background-image: url("https://images.pexels.com/photos/1152237/pexels-photo-1152237.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.intro .bgc.bg02 {
+	background-image: url("../img/web/22.jpg");
+}
+
+.intro .bgc.bg03 {
+	background-image: url("../img/web/12.jpg");
+}
+
+.intro .bgc.bg04 {
+	background-image: url("../img/web/13.jpg");
+}
+
+.intro .col {
+	width: 50%;
+}
+
+.intro .col:first-child .top,
+.intro .col:last-child .top {
+	height: 400px;
+	display: flex;
+}
+
+.intro .col:first-child .bottom,
+.intro .col:last-child .bottom {
+	height: 400px;
+	display: flex;
+}
+
+.intro .col:first-child .left,
+.intro .col:first-child .right,
+.intro .col:last-child .left,
+.intro .col:last-child .right {
+	width: 50%;
+}
+
+.intro .col:first-child .right,
+.intro .col:last-child .right {
+	padding: 0 10%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
