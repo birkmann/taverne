@@ -109,7 +109,7 @@ header.main .container {
 
 body.scrolled header.main {
 	background: #fff;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 
@@ -158,6 +158,19 @@ body.scrolled header.main nav.main a:hover {
 
 .stage {
 	position: relative;
+}
+
+.stage:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: #000;
+	z-index: 1;
+	opacity: 0.1;
 }
 
 .stage .bar {
@@ -377,22 +390,67 @@ body.scrolled header.main nav.main a:hover {
 
 section.fabric {
 	position: relative;
-	min-height: 2450px;
-	background-image: url("https://greekislands.net/assets/images/pattern.jpg");
-	background-position: center center;
-	background-repeat: repeat;
 	padding: 400px 0;
 	overflow: hidden;
+	background: #313644;
+	min-height: 110vh;
 }
 
-section.fabric:before {
-	content: "";
-	width: 355px;
-	height: 227px;
+section.fabric .deco {
+	display: block;
+	width: 400px;
+	height: 400px;
 	position: absolute;
-	top: -50px;
-	left: 0;
-	background: url("https://greekislands.net/assets/images/herbs-3.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+section.fabric .deco.deco-01 {
+	opacity: 0.1;
+	top: -90px;
+	left: -20px;
+	background-image: url("../img/deco/herb.png");
+}
+
+section.fabric .deco.deco-02 {
+	opacity: 0.1;
+	top: -100px;
+	right: -100px;
+	background-image: url("../img/deco/herb2.png");
+	transform: rotate(-90deg);
+}
+
+section.fabric .deco.deco-03 {
+	opacity: 0.1;
+	bottom: 0px;
+	right: 0px;
+	background-image: url("../img/deco/onion.png");
+	background-size: 50%;
+	transform: rotate(-20deg);
+}
+
+section.fabric .deco.deco-04 {
+	opacity: 0.1;
+	bottom: 20px;
+	left: 0px;
+	background-image: url("../img/deco/onions.png");
+	background-size: 80%;
+	transform: rotate(-20deg);
+}
+
+section.fabric .deco.deco-05 {
+	top: 25%;
+    left: 2%;
+    background-image: url(https://www.farmboy.ca/wp-content/uploads/2019/07/greek-salad-3.png);
+}
+
+section.fabric .deco.deco-06 {
+	bottom: 20%;
+    right: 5%;
+    background-image: url(https://images.vivino.com/thumbs/AhfEXt94TLWm8RtO_ic43w_pb_x600.png);
+    width: 160px;
+    height: 615px;
 }
 
 #map {
