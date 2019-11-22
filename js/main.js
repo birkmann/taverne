@@ -6,7 +6,7 @@ $(document).ready(function() {
 	});
 });
 
-$(window).scroll(function(){
+$(window).on('resize scroll load', function() {
 	if ( $(this).scrollTop() > 200 ) { 
 		$('body').addClass("scrolled");
 	} else { 
