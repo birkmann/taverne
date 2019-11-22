@@ -24,17 +24,48 @@ $('a[href^="#"]').on('click',function(e) {
 	}, 500, 'swing', function() {});
 });
 
-function cycleImages(){
-      var $active = $('#slider .active');
-      var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
-      $next.css('z-index',2);//move the next image up the pile
-      $active.fadeOut(1500,function(){//fade out the top image
-	  $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
-          $next.css('z-index',3).addClass('active');//make the next image the top one
-      });
-    }
 
-$(document).ready(function(){
-// run every 7s
-setInterval('cycleImages()', 7000);
-})
+
+var duration = 50; // duration in seconds
+var fadeAmount = 0.3; // fade duration amount relative to the time the image is visible
+
+$(document).ready(function (){
+  var images = $("#slideshow .item");
+  var numImages = images.size();
+  var durationMs = duration * 1000;
+  var imageTime = durationMs / numImages; // time the image is visible 
+  var fadeTime = imageTime * fadeAmount; // time for cross fading
+  var visibleTime = imageTime  - (imageTime * fadeAmount * 2);// time the image is visible with opacity == 1
+  var animDelay = visibleTime * (numImages - 1) + fadeTime * (numImages - 2); // animation delay/offset for a single image 
+  
+  images.each( function( index, element ){
+    if(index != 0){
+      $(element).css("opacity","0");
+      setTimeout(function(){
+        doAnimationLoop(element,fadeTime, visibleTime, fadeTime, animDelay);
+      },visibleTime*index + fadeTime*(index-1));
+    }else{
+      setTimeout(function(){
+        $(element).animate({opacity:0},fadeTime, function(){
+          setTimeout(function(){
+            doAnimationLoop(element,fadeTime, visibleTime, fadeTime, animDelay);
+          },animDelay )
+        });
+      },visibleTime);
+    }
+  });
+});
+
+// creates a animation loop
+function doAnimationLoop(element, fadeInTime, visibleTime, fadeOutTime, pauseTime){
+  fadeInOut(element,fadeInTime, visibleTime, fadeOutTime ,function(){
+    setTimeout(function(){
+      doAnimationLoop(element, fadeInTime, visibleTime, fadeOutTime, pauseTime);
+    },pauseTime);
+  });
+}
+
+// shorthand for in- and out-fading
+function fadeInOut( element, fadeIn, visible, fadeOut, onComplete){
+  return $(element).animate( {opacity:1}, fadeIn ).delay( visible ).animate( {opacity:0}, fadeOut, onComplete);
+}

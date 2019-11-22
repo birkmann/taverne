@@ -64,10 +64,10 @@ body.scrolled a.logo {
 
 a.logo .icon {
 	background: #fff;
-    margin-top: -40px;
-    padding: 34px 22px 0 15px;
-    margin-right: 17px;
-    border-radius: 0 0 5px 5px;
+	margin-top: -40px;
+	padding: 34px 22px 0 15px;
+	margin-right: 17px;
+	border-radius: 0 0 5px 5px;
 }
 
 a.logo .icon img {
@@ -142,7 +142,8 @@ body.scrolled header.main nav.main a {
 	color: #111
 }
 
-header.main nav.main a:hover {
+header.main nav.main a:hover,
+body.scrolled header.main nav.main a:hover {
 	color: #0D5EAF;
 }
 
@@ -212,38 +213,87 @@ header.main nav.main a:hover {
 
 .stage {
 	position: relative;
+}
+
+.stage .bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	z-index: 1;
-	height: 80vh;
+	width: 100%;
+	background: rgba(13, 94, 175, 0.9);
+	height: 60px;
+	display: flex;
+}
+
+.stage .bar .col {
+	width: 50%;
+	padding: 0 5%;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+}
+
+.stage .bar .col a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.25em;
+}
+
+#slideshow {
+	position: relative;
+	height: 100vh;
 	overflow: hidden;
 }
 
-.stage:before {
+#slideshow:before {
 	content: "";
 	position: absolute;
-	top: 0;
+	z-index: 1;
 	left: 0;
+	top: 0;
 	right: 0;
 	bottom: 0;
 	background: #000;
-	opacity: 0.6;
-	z-index: 5;
+	opacity: 0.5;
 }
 
-#slider {
-	position: relative;
-}
-
-#slider img {
+#slideshow img {
 	position: absolute;
-	z-index: 1;
-	width: 100%;
-	height: auto;
-	top: -100px;
+	top: 50%;
 	left: 0;
+	width: 100%;
+	transform: translate(0,-50%);
 }
 
-#slider img.active { 
-	z-index: 3;
+#slideshow .item {
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center 50%;
+	background-repeat: no-repeat;
+}
+
+#slideshow .item.item-00 {
+	background-image: url("https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+#slideshow .item.item-01 {
+	background-image: url("../img/web/1.jpg");
+}
+
+#slideshow .item.item-02 {
+	background-image: url("../img/web/30.jpg");
+}
+
+#slideshow .item.item-03 {
+	background-image: url("../img/web/29.jpg");
+}
+
+#slideshow .item.item-04 {
+	background-image: url("../img/web/31.jpg");
 }
 
 .welcome {
@@ -256,22 +306,36 @@ header.main nav.main a:hover {
 
 .welcome img.top {
 	width: 300px;
-    height: auto;
-    margin-top: -188px;
-    margin-bottom: -30px;
-    position: relative;
-    z-index: 1;
+	height: auto;
+	margin-top: -215px;
+	margin-bottom: -30px;
+	position: relative;
+	z-index: 1;
 }
 
 .welcome img.trip {
-	position: absolute;
-	bottom: 25%;
-	right: 0;
+	max-width: 100%;
+	width: 150px;
+	margin: 20px auto;
+	height: auto;
+	opacity: 1;
 }
 
 .welcome p {
 	max-width: 1200px;
 	margin: 0 auto;
+}
+
+.welcome .row {
+	display: flex; 
+}
+
+.welcome .row .col {
+	width: 20%;
+}
+
+.welcome .row .col.center {
+	width: 60%;
 }
 
 .intro {
@@ -314,13 +378,13 @@ header.main nav.main a:hover {
 
 .intro .col:first-child .top,
 .intro .col:last-child .top {
-	height: 400px;
+	height: 320px;
 	display: flex;
 }
 
 .intro .col:first-child .bottom,
 .intro .col:last-child .bottom {
-	height: 400px;
+	height: 320px;
 	display: flex;
 }
 
@@ -333,10 +397,10 @@ header.main nav.main a:hover {
 
 .intro .col:first-child .right,
 .intro .col:last-child .right {
-	padding: 0 10%;
+	padding: 0 5%;
 	display: flex;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 
 section.fabric {
@@ -360,7 +424,7 @@ section.fabric:before {
 }
 
 footer.main {
-	padding: 100px 0
+	padding: 20px 0
 }
 
 footer.main .row {
@@ -369,5 +433,5 @@ footer.main .row {
 
 footer.main .row .col {
 	width: 33%;
-	padding: 20px;
+	padding: 50px;
 }
