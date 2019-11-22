@@ -48,14 +48,14 @@ h2 {
 }
 
 a.logo {
-	font-family: 'Diogenes';
-	text-decoration: none;
-	color: #fff;
-	margin: 20px;
-	text-transform: uppercase;
-	display: flex;
-	transform: scale(0.8);
-	transition: color 0.25s ease-in-out;
+    font-family: 'Diogenes';
+    text-decoration: none;
+    color: #fff;
+    margin: 20px 0 25px 0;
+    text-transform: uppercase;
+    display: flex;
+    transform: scale(0.8);
+    transition: color 0.25s ease-in-out;
 }
 
 body.scrolled a.logo {
@@ -118,10 +118,10 @@ body.scrolled header.main {
 	position: relative;
 	background-image: url(../img/wave.svg), url(../img/wave.svg);
 	background-repeat: repeat-x;
-	background-size: 70px 70px; 
+	background-size: 50px 50px; 
 	background-position: top, bottom;
 	width: 100%;
-	height: 70px;
+	height: 50px;
 	background-color: #fff;
 }
 
@@ -136,6 +136,10 @@ header.main nav.main a {
 	color: #fff;
 	font-size: 1.5em;
 	transition: color 0.25s ease-in-out;
+}
+
+header.main nav.main a:last-child {
+	margin-right: 20px;
 }
 
 body.scrolled header.main nav.main a {
@@ -257,7 +261,7 @@ body.scrolled header.main nav.main a:hover {
 	right: 0;
 	bottom: 0;
 	background: #000;
-	opacity: 0.25;
+	opacity: 0.1;
 }
 
 #slideshow img {
@@ -279,28 +283,29 @@ body.scrolled header.main nav.main a:hover {
 }
 
 
-#slideshow .item.item-00 {
+#slideshow .item.item-01 {
 	background-image: url("https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
-#slideshow .item.item-01 {
-	background-image: url("../img/web/30.jpg");
+#slideshow .item.item-02 {
+	background-image: url("../img/ta/food2.jpg");
 }
 
-#slideshow .item.item-02 {
+#slideshow .item.item-03 {
 	background-image: url("../img/web/1.jpg");
 	background-position: center 70%;
 }
 
-#slideshow .item.item-03 {
-	background-image: url("../img/web/29.jpg");
-}
-
 #slideshow .item.item-04 {
-	background-image: url("../img/web/31.jpg");
+	background-image: url("../img/ta/food5.jpg");
+	background-position: center bottom;
 }
 
 #slideshow .item.item-05 {
+	background-image: url("../img/web/29.jpg");
+}
+
+#slideshow .item.item-06 {
 	background-image: url("../img/taverne-yamas.jpg");
 	background-position: center bottom;
 }
@@ -319,7 +324,7 @@ body.scrolled header.main nav.main a:hover {
 }
 
 .welcome h2:nth-child(1) {
-	margin-top: 50px;
+	margin-top: 45px;
 }
 
 .welcome h2:nth-child(2) {
@@ -344,7 +349,15 @@ body.scrolled header.main nav.main a:hover {
 .welcome img.trip {
 	max-width: 100%;
 	width: 150px;
-	margin: 55px auto;
+	margin: 30px auto;
+	height: auto;
+	opacity: 1;
+}
+
+.welcome img.facebook {
+	max-width: 100%;
+	width: 80px;
+	margin: 50px auto;
 	height: auto;
 	opacity: 1;
 }
@@ -355,14 +368,6 @@ body.scrolled header.main nav.main a:hover {
 }
 
 .welcome a.extern:hover {
-	opacity: 1;
-}
-
-.welcome img.facebook {
-	max-width: 100%;
-	width: 80px;
-	margin: 60px auto;
-	height: auto;
 	opacity: 1;
 }
 
@@ -478,6 +483,10 @@ footer.main {
 	background: #fff;
 	position: relative;
 	z-index: 5;
+}
+
+footer.main .container {
+	max-width: 100%;
 }
 
 footer.main .row {
