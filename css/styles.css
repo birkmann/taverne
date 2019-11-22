@@ -434,11 +434,11 @@ section.fabric .deco.deco-02 {
 
 section.fabric .deco.deco-03 {
 	opacity: 0.1;
-	bottom: 2%;
-	right: 10%;
-	background-image: url("../img/deco/onion.png");
-	background-size: 50%;
-	transform: rotate(-20deg);
+    bottom: 29%;
+    right: 0%;
+    background-image: url(../img/deco/onion.png);
+    background-size: 50%;
+    transform: rotate(-20deg);
 }
 
 section.fabric .deco.deco-04 {
