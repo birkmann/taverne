@@ -21,9 +21,8 @@ $('a[href^="#"]').on('click',function(e) {
 	if ($(this).data('offset') != undefined) offset = $(this).data('offset');
 	$('html, body').stop().animate({
 		'scrollTop': $(target).offset().top - 0
-	}, 500, 'swing', function() {});
+	}, 1000, 'swing', function() {});
 });
-
 
 
 var duration = 50; // duration in seconds
@@ -102,3 +101,21 @@ function debounce(fn, wait) {
 		}, (wait || 1));
 	}
 }
+
+
+$.fn.isInViewport = function() {
+	var elementTop = $(this).offset().top;
+	var elementBottom = elementTop + $(this).outerHeight();
+	var viewportTop = $(window).scrollTop();
+	var viewportBottom = viewportTop + $(window).height();
+	return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).on('resize scroll', function() {
+
+	$('.parallax').each(function() {
+		var velocity = $(this).data("velocity");
+		$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px)');
+	});
+
+});
