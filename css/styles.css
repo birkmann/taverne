@@ -48,31 +48,36 @@ h2 {
 }
 
 a.logo {
-    font-family: 'Diogenes';
-    text-decoration: none;
-    color: #fff;
-    margin: 20px 0 25px 0;
-    text-transform: uppercase;
-    display: flex;
-    transform: scale(0.8);
-    transition: color 0.25s ease-in-out;
+	font-family: 'Diogenes';
+	text-decoration: none;
+	color: #fff;
+	margin: 20px 0 10px 0;
+	text-transform: uppercase;
+	display: flex;
+	transform: scale(0.8);
+	transition: color 0.25s ease-in-out;
 }
 
 body.scrolled a.logo {
 	color: #111;
 }
 
-a.logo .icon {
-	background: #fff;
-	margin-top: -40px;
-	padding: 34px 22px 0 15px;
-	margin-right: 17px;
-	border-radius: 0 0 5px 5px;
+a.logo .icon svg {
+	width: 60px;
+	height: auto;
+	margin-right: 20px;
 }
 
-a.logo .icon img {
-	width: 55px;
-	height: auto;
+a.logo .icon svg path {
+	transition: fill 0.25s ease-in-out;
+}
+
+a.logo .icon svg g {
+	fill: #fff;
+}
+
+body.scrolled a.logo .icon svg g {
+	fill: #0D5EAF;
 }
 
 a.logo .text .main {
@@ -184,7 +189,7 @@ body.scrolled header.main nav.main a:hover {
 
 #slideshow {
 	position: relative;
-	height: 75vh;
+	height: 77vh;
 	overflow: hidden;
 }
 
@@ -390,11 +395,16 @@ section.fabric:before {
 	background: url("https://greekislands.net/assets/images/herbs-3.png");
 }
 
+#map {
+	height: 40vh;
+}
+
 footer.main {
 	padding: 20px 0;
 	background: #fff;
 	position: relative;
 	z-index: 5;
+	height: 40vh;
 }
 
 footer.main .container {
@@ -412,7 +422,7 @@ footer.main .row .col {
 
 footer.main a.extern {
 	text-decoration: none;
-	opacity: 0.5;
+	opacity: 0.75;
 	transition: all 0.25s ease-in-out;
 	margin: 10px;
 }
@@ -422,5 +432,5 @@ footer.main a.extern:hover {
 }
 
 footer.main a.extern img {
-	max-width: 50px;
+	max-width: 75px;
 }

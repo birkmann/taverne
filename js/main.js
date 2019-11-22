@@ -20,7 +20,7 @@ $('a[href^="#"]').on('click',function(e) {
 	var target = this.hash;
 	if ($(this).data('offset') != undefined) offset = $(this).data('offset');
 	$('html, body').stop().animate({
-		'scrollTop': $(target).offset().top - scrollOffset
+		'scrollTop': $(target).offset().top - 0
 	}, 500, 'swing', function() {});
 });
 
@@ -70,10 +70,11 @@ function fadeInOut( element, fadeIn, visible, fadeOut, onComplete){
 	return $(element).animate( {opacity:1}, fadeIn ).delay( visible ).animate( {opacity:0}, fadeOut, onComplete);
 }
 
+
+
+
 var cover = document.querySelector('.js-parallax'),
-coverHeight = Math.round(cover.offsetHeight),
-translate,
-parallaxThreshold = 3;
+coverHeight = Math.round(cover.offsetHeight), translate, parallaxThreshold = 3;
 
 function parallax() {
 	if (window.scrollY < coverHeight) {
