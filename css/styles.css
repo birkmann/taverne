@@ -50,15 +50,24 @@ body {
 a.logo {
 	font-family: 'Diogenes';
 	text-decoration: none;
-	color: #111;
+	color: #fff;
 	margin: 20px;
 	text-transform: uppercase;
 	display: flex;
 	transform: scale(0.8);
+	transition: color 0.25s ease-in-out;
+}
+
+body.scrolled a.logo {
+	color: #111;
 }
 
 a.logo .icon {
-	margin-right: 10px;
+	background: #fff;
+    margin-top: -40px;
+    padding: 34px 22px 0 15px;
+    margin-right: 17px;
+    border-radius: 0 0 5px 5px;
 }
 
 a.logo .icon img {
@@ -95,6 +104,7 @@ header.main .container {
 
 body.scrolled header.main {
 	background: #fff;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 
@@ -123,8 +133,13 @@ header.main nav.main a {
 	text-decoration: none;
 	line-height: 80px;
 	padding: 20px;
-	color: #222;
+	color: #fff;
 	font-size: 1.5em;
+	transition: color 0.25s ease-in-out;
+}
+
+body.scrolled header.main nav.main a {
+	color: #111
 }
 
 header.main nav.main a:hover {
@@ -137,12 +152,24 @@ header.main nav.main a:hover {
 	position: relative;
 	overflow: hidden;
 	background-image: url("../img/web/27.jpg");
-	background-image: url("https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-image: url("https://www.cntravellerme.com/sites/default/files/styles/1920px_900px_wide_landscape/public/images/2018/07/08/Mythos-greek-restaurant.jpg?itok=memagbzx&c=515608ebbf5c2bdb295573631d876b19");
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 
+.emotion:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: 0.5;
+}
+
+/*
 .emotion:before {
 	content: "";
 	width: 100%;
@@ -152,10 +179,11 @@ header.main nav.main a:hover {
 	left: 0;
 	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 82%);
 }
+*/
 
 @media (min-width: 960px) {
 	.emotion {
-		height: 80vh;
+		height: 70vh;
 		min-height: 600px;
 	}
 }
@@ -187,11 +215,13 @@ header.main nav.main a:hover {
 	padding: 50px 0;
 	font-size: 1.25em;
 	line-height: 1.6em;
+	position: relative;
 }
 
 .welcome img {
-	width: 50px;
+	width: 200px;
 	height: auto;
+	margin-top: -200px;
 }
 
 .welcome p {
@@ -262,4 +292,24 @@ header.main nav.main a:hover {
 	display: flex;
     align-items: center;
     justify-content: center;
+}
+
+section.fabric {
+	position: relative;
+	min-height: 2450px;
+	background-image: url("https://greekislands.net/assets/images/pattern.jpg");
+	background-position: center center;
+	background-repeat: repeat;
+	padding: 400px 0;
+	overflow: hidden;
+}
+
+section.fabric:before {
+	content: "";
+	width: 355px;
+	height: 227px;
+	position: absolute;
+	top: -50px;
+	left: 0;
+	background: url("https://greekislands.net/assets/images/herbs-3.png");
 }
