@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Diogenes';
-	src: url('../font/diogenes.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+	src: url('../font/diogenes.ttf') format('truetype');
 }
 
 body {
@@ -151,46 +151,6 @@ body.scrolled header.main nav.main a:hover {
 	color: #0D5EAF;
 }
 
-.emotion {
-	min-height: 600px;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-	background-image: url("https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-	background-image: url("../img/web/27.jpg");
-	background-size: cover;
-	background-position: center 50%;
-	background-repeat: no-repeat;
-}
-
-.emotion:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #000;
-	opacity: 0.5;
-}
-
-@media (min-width: 960px) {
-	.emotion {
-		height: 70vh;
-		min-height: 600px;
-	}
-}
-
-.emotion .text {
-	position: relative;
-	z-index: 1;
-}
-
-.emotion .bg {
-	transition: all 0.25s ease-in-out;
-}
-
-
 .stage {
 	position: relative;
 }
@@ -251,7 +211,7 @@ body.scrolled header.main nav.main a:hover {
 #slideshow .item {
 	height: 100vh;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	overflow: hidden;
 	background-size: cover;
 	background-position: center 50%;
@@ -304,11 +264,7 @@ body.scrolled header.main nav.main a:hover {
 	margin: 5px 0 5px;
 }
 
-.welcome h2:nth-child(1) {
-	margin-top: 45px;
-}
-
-.welcome h2:nth-child(2) {
+.welcome h2:nth-child(3) {
 	color: #ccc;
 	margin-top: -10px;
 }
@@ -322,7 +278,7 @@ body.scrolled header.main nav.main a:hover {
 	width: 300px;
 	height: auto;
 	margin-top: -215px;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	position: relative;
 	z-index: 1;
 }
