@@ -218,11 +218,17 @@ header.main nav.main a:hover {
 	position: relative;
 }
 
-.welcome img {
+.welcome img.top {
 	width: 500px;
     height: auto;
     margin-top: -500px;
     margin-bottom: -30px;
+}
+
+.welcome img.trip {
+	position: absolute;
+	bottom: 25%;
+	right: 0;
 }
 
 .welcome p {
