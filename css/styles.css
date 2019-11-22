@@ -152,7 +152,7 @@ header.main nav.main a:hover {
 	position: relative;
 	overflow: hidden;
 	background-image: url("https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-	background-image: url("../img/web/1.jpg");
+	background-image: url("../img/web/27.jpg");
 	background-size: cover;
 	background-position: center 50%;
 	background-repeat: no-repeat;
@@ -319,4 +319,17 @@ section.fabric:before {
 	top: -50px;
 	left: 0;
 	background: url("https://greekislands.net/assets/images/herbs-3.png");
+}
+
+footer.main {
+	padding: 100px 0
+}
+
+footer.main .row {
+	display: flex;
+}
+
+footer.main .row .col {
+	width: 33%;
+	padding: 20px;
 }
