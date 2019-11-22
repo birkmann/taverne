@@ -210,6 +210,42 @@ header.main nav.main a:hover {
 }
 */
 
+.stage {
+	position: relative;
+	z-index: 1;
+	height: 80vh;
+	overflow: hidden;
+}
+
+.stage:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: 0.6;
+	z-index: 5;
+}
+
+#slider {
+	position: relative;
+}
+
+#slider img {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: auto;
+	top: -100px;
+	left: 0;
+}
+
+#slider img.active { 
+	z-index: 3;
+}
+
 .welcome {
 	text-align: center;
 	padding: 50px 0 100px;
@@ -219,10 +255,12 @@ header.main nav.main a:hover {
 }
 
 .welcome img.top {
-	width: 500px;
+	width: 300px;
     height: auto;
-    margin-top: -500px;
+    margin-top: -188px;
     margin-bottom: -30px;
+    position: relative;
+    z-index: 1;
 }
 
 .welcome img.trip {
