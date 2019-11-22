@@ -299,9 +299,9 @@ body.scrolled header.main nav.main a:hover {
 }
 
 .welcome img.top {
-	width: 300px;
+	width: 220px;
 	height: auto;
-	margin-top: -215px;
+	margin-top: -190px;
 	margin-bottom: 0px;
 	position: relative;
 	z-index: 1;
@@ -473,6 +473,7 @@ section.fabric .deco.deco-06 {
 	text-transform: uppercase;
 	font-size: 2em;
 	font-family: 'Diogenes';
+	letter-spacing: 5px;
 }
 
 #map {
