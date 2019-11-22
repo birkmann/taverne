@@ -111,11 +111,21 @@ $.fn.isInViewport = function() {
 	return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-$(window).on('resize scroll', function() {
+$(window).on('resize scroll load', function() {
 
 	$('.parallax').each(function() {
 		var velocity = $(this).data("velocity");
 		$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px)');
+	});
+
+	$('.parallax-rotate').each(function() {
+		var velocity = $(this).data("velocity");
+		$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px) rotate(' + $(window).scrollTop() / (velocity*2)   + 'deg)');
+	});
+
+	$('.parallax-rotate-slow').each(function() {
+		var velocity = $(this).data("velocity");
+		$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px) rotate(' + $(window).scrollTop() / (velocity*15)   + 'deg)');
 	});
 
 });

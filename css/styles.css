@@ -390,7 +390,7 @@ body.scrolled header.main nav.main a:hover {
 
 section.fabric {
 	position: relative;
-	padding: 400px 0;
+	padding: 200px 0;
 	overflow: hidden;
 	background: #313644;
 	min-height: 110vh;
@@ -408,14 +408,14 @@ section.fabric .deco {
 
 section.fabric .deco.deco-01 {
 	opacity: 0.1;
-	top: -90px;
-	left: -20px;
+	top: 50px;
+	left: -50px;
 	background-image: url("../img/deco/herb.png");
 }
 
 section.fabric .deco.deco-02 {
 	opacity: 0.1;
-	top: -100px;
+	top: 50px;
 	right: -100px;
 	background-image: url("../img/deco/herb2.png");
 	transform: rotate(-90deg);
@@ -423,7 +423,7 @@ section.fabric .deco.deco-02 {
 
 section.fabric .deco.deco-03 {
 	opacity: 0.1;
-	bottom: 0px;
+	bottom: -500px;
 	right: 0px;
 	background-image: url("../img/deco/onion.png");
 	background-size: 50%;
@@ -432,7 +432,7 @@ section.fabric .deco.deco-03 {
 
 section.fabric .deco.deco-04 {
 	opacity: 0.1;
-	bottom: 20px;
+	bottom: -300px;
 	left: 0px;
 	background-image: url("../img/deco/onions.png");
 	background-size: 80%;
@@ -440,17 +440,33 @@ section.fabric .deco.deco-04 {
 }
 
 section.fabric .deco.deco-05 {
-	bottom: 0px;
-    left: 2%;
+	bottom: -500px;
+    left: -4%;
     background-image: url(https://www.farmboy.ca/wp-content/uploads/2019/07/greek-salad-3.png);
 }
 
 section.fabric .deco.deco-06 {
-	bottom: -1400px;
-    right: 5%;
+	bottom: -600px;
+    right: 10%;
     background-image: url(https://images.vivino.com/thumbs/AhfEXt94TLWm8RtO_ic43w_pb_x600.png);
     width: 160px;
     height: 615px;
+}
+
+.card {
+	background: #fff;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 50px;
+	min-height: 1000px;
+    box-shadow: inset 0 0 0 16px #fff, inset 0 0 0 17px #e6b741, inset 0 0 0 18px #fff, inset 0 0 0 19px #e6b741, inset 0 0 0 20px #fff, inset 0 0 0 21px #e6b741;
+}
+
+.card h3 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2em;
+	font-family: 'Diogenes';
 }
 
 #map {
