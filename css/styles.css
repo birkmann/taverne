@@ -5,7 +5,7 @@
 
 body {
 	margin: 0;
-	font: 16px/1.6em sans-serif;
+	font: 16px/1.6em 'Montserrat', sans-serif;
 	color: #333;
 	background: #fff;
 	overflow-x: hidden;
@@ -13,16 +13,16 @@ body {
 	position: relative;
 }
 
-@media (min-width: 1600px) {
-	body {
-		font: 17px/1.6em sans-serif;
-	}
-}
-
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+h2 {
+	font-family: 'Crimson Text', serif;
+	font-size: 2.25em;
+	line-height: 1em;
 }
 
 .container {
@@ -237,12 +237,14 @@ body.scrolled header.main nav.main a:hover {
 .stage .bar .col a {
 	text-decoration: none;
 	color: #fff;
-	font-size: 1.25em;
+	font-size: 2em;
+	font-family: 'Crimson Text', serif;
+
 }
 
 #slideshow {
 	position: relative;
-	height: 100vh;
+	height: 75vh;
 	overflow: hidden;
 }
 
@@ -255,7 +257,7 @@ body.scrolled header.main nav.main a:hover {
 	right: 0;
 	bottom: 0;
 	background: #000;
-	opacity: 0.5;
+	opacity: 0.25;
 }
 
 #slideshow img {
@@ -269,23 +271,25 @@ body.scrolled header.main nav.main a:hover {
 #slideshow .item {
 	height: 100vh;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	overflow: hidden;
 	background-size: cover;
 	background-position: center 50%;
 	background-repeat: no-repeat;
 }
 
+
 #slideshow .item.item-00 {
 	background-image: url("https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 #slideshow .item.item-01 {
-	background-image: url("../img/web/1.jpg");
+	background-image: url("../img/web/30.jpg");
 }
 
 #slideshow .item.item-02 {
-	background-image: url("../img/web/30.jpg");
+	background-image: url("../img/web/1.jpg");
+	background-position: center 70%;
 }
 
 #slideshow .item.item-03 {
@@ -296,12 +300,36 @@ body.scrolled header.main nav.main a:hover {
 	background-image: url("../img/web/31.jpg");
 }
 
+#slideshow .item.item-05 {
+	background-image: url("../img/taverne-yamas.jpg");
+	background-position: center bottom;
+}
+
 .welcome {
 	text-align: center;
 	padding: 50px 0 100px;
 	font-size: 1.25em;
 	line-height: 1.6em;
 	position: relative;
+	background: #fff;
+}
+
+.welcome h2 {
+	margin: 5px 0 5px;
+}
+
+.welcome h2:nth-child(1) {
+	margin-top: 50px;
+}
+
+.welcome h2:nth-child(2) {
+	color: #ccc;
+	margin-top: -10px;
+}
+
+.welcome p {
+	max-width: 1200px;
+	margin: 20px auto 0;
 }
 
 .welcome img.top {
@@ -316,14 +344,26 @@ body.scrolled header.main nav.main a:hover {
 .welcome img.trip {
 	max-width: 100%;
 	width: 150px;
-	margin: 20px auto;
+	margin: 55px auto;
 	height: auto;
 	opacity: 1;
 }
 
-.welcome p {
-	max-width: 1200px;
-	margin: 0 auto;
+.welcome a.extern {
+	opacity: 0.5;
+	transition: all 0.25s ease-in-out;
+}
+
+.welcome a.extern:hover {
+	opacity: 1;
+}
+
+.welcome img.facebook {
+	max-width: 100%;
+	width: 80px;
+	margin: 60px auto;
+	height: auto;
+	opacity: 1;
 }
 
 .welcome .row {
@@ -339,13 +379,14 @@ body.scrolled header.main nav.main a:hover {
 }
 
 .intro {
+	position: relative;
+	z-index: 5;
 	display: flex;
 	background: #0D5EAF;
 	color: #fff;
 }
 
 .intro h2 {
-	line-height: 1.4em;
 	font-weight: normal;
 }
 
@@ -377,11 +418,7 @@ body.scrolled header.main nav.main a:hover {
 }
 
 .intro .col:first-child .top,
-.intro .col:last-child .top {
-	height: 320px;
-	display: flex;
-}
-
+.intro .col:last-child .top,
 .intro .col:first-child .bottom,
 .intro .col:last-child .bottom {
 	height: 320px;
@@ -401,6 +438,19 @@ body.scrolled header.main nav.main a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@media (min-width: 1600px) {
+	.intro .col:first-child .top,
+	.intro .col:last-child .top,
+	.intro .col:first-child .bottom,
+	.intro .col:last-child .bottom {
+		height: 450px;
+	}
+	.intro .col:first-child .right,
+	.intro .col:last-child .right {
+		padding: 0 10%;
+	}
 }
 
 section.fabric {
@@ -424,7 +474,10 @@ section.fabric:before {
 }
 
 footer.main {
-	padding: 20px 0
+	padding: 20px 0;
+	background: #fff;
+	position: relative;
+	z-index: 5;
 }
 
 footer.main .row {
