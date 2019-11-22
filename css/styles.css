@@ -129,10 +129,10 @@ body.scrolled header.main {
 	position: relative;
 	background-image: url(../img/wave.svg), url(../img/wave.svg);
 	background-repeat: repeat-x;
-	background-size: 50px 50px; 
+	background-size: 40px 40px; 
 	background-position: top, bottom;
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	background-color: #fff;
 }
 
@@ -451,40 +451,60 @@ section.fabric .deco.deco-04 {
 }
 
 section.fabric .deco.deco-05 {
-	bottom: -400px;
-    left: -8%;
+	bottom: -100px;
+    left: -9%;
     background-image: url(https://www.farmboy.ca/wp-content/uploads/2019/07/greek-salad-3.png);
 	z-index: 2;
 }
 
 section.fabric .deco.deco-07 {
-	bottom: -1100px;
+	bottom: -1200px;
     left: -6%;
     background-image: url(https://static.thuisbezorgd.nl/images/restaurants/nl/NPPO5RO/products/deli_griek_gyros_schotel_08.png);
-	width: 600px;
+	width: 500px;
 	z-index: 2;
 }
 
 section.fabric .deco.deco-08 {
 	bottom: 100px;
-    left: 9%;
+    left: 1%;
     background-image: url(https://static.thuisbezorgd.nl/images/restaurants/nl/NPPO5RO/products/deli_griek_olijf_15.png);
-	width: 300px;
+	width: 280px;
 	z-index: 1;
 }
 
 section.fabric .deco.deco-06 {
 	bottom: -800px;
-    right: 20%;
+    right: 2%;
     background-image: url(https://images.vivino.com/thumbs/AhfEXt94TLWm8RtO_ic43w_pb_x600.png);
-    width: 190px;
+    width: 170px;
     height: 800px;
 }
 section.fabric .deco.deco-09 {
 	bottom: -1600px;
     right: 1%;
     background-image: url(../img/kisspng-bryndza-goat-cheese-queso-blanco-feta-beyaz-peynir-5b0cf05de938f3.3247039615275746219553.png);
-	width: 400px;
+	width: 350px;
+}
+
+@media (min-width: 1600px) {
+
+	section.fabric .deco.deco-05 {
+		bottom: -400px;
+	}
+	section.fabric .deco.deco-06 {
+		right: 17%;
+		width: 190px;
+		height: 800px;
+	}
+	section.fabric .deco.deco-08 {
+		left: 9%;
+	}
+	section.fabric .deco.deco-07 {
+		width: 600px;
+		bottom: -1100px;
+	}
+
 }
 
 .card {
