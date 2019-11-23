@@ -187,7 +187,7 @@ body.scrolled header.main nav.main a:hover {
 .stage .bar .col a {
 	text-decoration: none;
 	color: #fff;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-family: 'Crimson Text', serif;
 }
 
@@ -204,6 +204,9 @@ body.scrolled header.main nav.main a:hover {
 	}
 	.stage .bar .col {
 		width: 50%;
+	}
+	.stage .bar .col a {
+		font-size: 2em;
 	}
 }
 
