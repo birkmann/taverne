@@ -70,27 +70,29 @@ function fadeInOut( element, fadeIn, visible, fadeOut, onComplete){
 }
 
 
+if ($(window).width() > 960) {
 
+	var cover = document.querySelector('.js-parallax'),
+	coverHeight = Math.round(cover.offsetHeight), translate, parallaxThreshold = 3;
 
-var cover = document.querySelector('.js-parallax'),
-coverHeight = Math.round(cover.offsetHeight), translate, parallaxThreshold = 3;
-
-function parallax() {
-	if (window.scrollY < coverHeight) {
-		translate = Math.round(window.scrollY / parallaxThreshold);
-		window.requestAnimationFrame(function () {
-			cover.style.transform = 'translateY(' + translate + 'px)';
-		});
+	function parallax() {
+		if (window.scrollY < coverHeight) {
+			translate = Math.round(window.scrollY / parallaxThreshold);
+			window.requestAnimationFrame(function () {
+				cover.style.transform = 'translateY(' + translate + 'px)';
+			});
+		}
 	}
+
+	parallax();
+
+	window.addEventListener('scroll', parallax, false);
+
+	window.addEventListener('resize', debounce(function () {
+		coverHeight = Math.round(cover.offsetHeight);
+	}, 500));
+
 }
-
-parallax();
-
-window.addEventListener('scroll', parallax, false);
-
-window.addEventListener('resize', debounce(function () {
-	coverHeight = Math.round(cover.offsetHeight);
-}, 500));
 
 function debounce(fn, wait) {
 	var timeout;
