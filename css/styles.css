@@ -689,10 +689,6 @@ footer.main a.extern img {
 		width: 33%;
 		padding: 50px;
 	}
-	footer.main {
-    	height: 40vh;
-    	min-height: 325px;
-	}
 }
 
 .wave {
