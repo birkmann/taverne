@@ -69,29 +69,30 @@ function fadeInOut( element, fadeIn, visible, fadeOut, onComplete){
 	return $(element).animate( {opacity:1}, fadeIn ).delay( visible ).animate( {opacity:0}, fadeOut, onComplete);
 }
 
+function parallaxHeader (){
+	if ($(window).width() > 960) {
 
-if ($(window).width() > 960) {
+		var cover = document.querySelector('.js-parallax'),
+		coverHeight = Math.round(cover.offsetHeight), translate, parallaxThreshold = 3;
 
-	var cover = document.querySelector('.js-parallax'),
-	coverHeight = Math.round(cover.offsetHeight), translate, parallaxThreshold = 3;
-
-	function parallax() {
-		if (window.scrollY < coverHeight) {
-			translate = Math.round(window.scrollY / parallaxThreshold);
-			window.requestAnimationFrame(function () {
-				cover.style.transform = 'translateY(' + translate + 'px)';
-			});
+		function parallax() {
+			if (window.scrollY < coverHeight) {
+				translate = Math.round(window.scrollY / parallaxThreshold);
+				window.requestAnimationFrame(function () {
+					cover.style.transform = 'translateY(' + translate + 'px)';
+				});
+			}
 		}
+
+		parallax();
+
+		window.addEventListener('scroll', parallax, false);
+
+		window.addEventListener('resize', debounce(function () {
+			coverHeight = Math.round(cover.offsetHeight);
+		}, 500));
+
 	}
-
-	parallax();
-
-	window.addEventListener('scroll', parallax, false);
-
-	window.addEventListener('resize', debounce(function () {
-		coverHeight = Math.round(cover.offsetHeight);
-	}, 500));
-
 }
 
 function debounce(fn, wait) {
@@ -114,6 +115,8 @@ $.fn.isInViewport = function() {
 };
 
 $(window).on('resize scroll load', function() {
+
+	parallaxHeader();
 
 	$('.parallax').each(function() {
 		var velocity = $(this).data("velocity");
