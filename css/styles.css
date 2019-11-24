@@ -364,23 +364,14 @@ body.scrolled header.main nav.main a:hover {
 	background-image: url("../img/ta/chef.jpg");
 }
 
-.intro .col {
-	width: 50%;
-}
-
 .intro .col:first-child .top,
 .intro .col:last-child .top,
 .intro .col:first-child .bottom,
 .intro .col:last-child .bottom {
 	height: 320px;
+	padding: 10px;
 }
 
-.intro .col:first-child .left,
-.intro .col:first-child .right,
-.intro .col:last-child .left,
-.intro .col:last-child .right {
-	width: 50%;
-}
 
 .intro .col:first-child .right,
 .intro .col:last-child .right {
@@ -399,6 +390,21 @@ body.scrolled header.main nav.main a:hover {
 	.intro .col:last-child .right {
 		display: flex;
 	}
+	.intro .col {
+		width: 50%;
+	}
+	.intro .col:first-child .left,
+	.intro .col:first-child .right,
+	.intro .col:last-child .left,
+	.intro .col:last-child .right {
+		width: 50%;
+	}
+	.intro .col:first-child .top,
+	.intro .col:last-child .top,
+	.intro .col:first-child .bottom,
+	.intro .col:last-child .bottom {
+		padding: 0px;
+	}
 }
 
 @media (min-width: 1600px) {
@@ -416,7 +422,6 @@ body.scrolled header.main nav.main a:hover {
 
 section.fabric {
 	position: relative;
-	padding: 200px 0;
 	overflow: hidden;
 	background: #313644;
 	min-height: 110vh;
@@ -428,7 +433,7 @@ section.fabric {
 }
 
 section.fabric .deco {
-	display: block;
+	display: none;
 	width: 400px;
 	height: 400px;
 	position: absolute;
@@ -505,6 +510,15 @@ section.fabric .deco.deco-09 {
     right: 1%;
     background-image: url(../img/kisspng-bryndza-goat-cheese-queso-blanco-feta-beyaz-peynir-5b0cf05de938f3.3247039615275746219553.png);
 	width: 350px;
+}
+
+@media (min-width: 960px) {
+	section.fabric {
+		padding: 200px 0;
+	}
+	section.fabric .deco {
+		display: block;
+	}
 }
 
 @media (min-width: 1600px) {
@@ -591,21 +605,14 @@ footer.main {
     background: #fff;
     position: relative;
     z-index: 5;
-    height: 40vh;
-    min-height: 325px;
+}
+
+footer.main .row .col {
+	padding: 20px;
 }
 
 footer.main .container {
 	max-width: 100%;
-}
-
-footer.main .row {
-	display: flex;
-}
-
-footer.main .row .col {
-	width: 33%;
-	padding: 50px;
 }
 
 footer.main a.extern {
@@ -621,6 +628,20 @@ footer.main a.extern:hover {
 
 footer.main a.extern img {
 	max-width: 75px;
+}
+
+@media (min-width: 960px) {
+	footer.main .row {
+		display: flex;
+	}
+	footer.main .row .col {
+		width: 33%;
+		padding: 50px;
+	}
+	footer.main {
+    	height: 40vh;
+    	min-height: 325px;
+	}
 }
 
 .wave {
