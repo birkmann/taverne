@@ -477,7 +477,7 @@ header.main nav.main a {
 
 	section.fabric .deco.deco-03 {
 		opacity: 0.1;
-	    bottom: 29%;
+	    bottom: -5%;
 	    right: 0%;
 	    background-image: url(../img/deco/onion.png);
 	    background-size: 50%;
@@ -486,7 +486,7 @@ header.main nav.main a {
 
 	section.fabric .deco.deco-04 {
 		opacity: 0.1;
-		bottom: 20%;
+		bottom: 18%;
 		left: 0%;
 		background-image: url("../img/deco/onions.png");
 		background-size: 80%;
@@ -511,21 +511,21 @@ header.main nav.main a {
 
 	section.fabric .deco.deco-08 {
 		bottom: 100px;
-	    left: 1%;
+	    left: -2%;
 	    background-image: url(https://static.thuisbezorgd.nl/images/restaurants/nl/NPPO5RO/products/deli_griek_olijf_15.png);
 		width: 280px;
 		z-index: 1;
 	}
 
 	section.fabric .deco.deco-06 {
-		bottom: -700px;
+		bottom: -500px;
 	    right: 2%;
 	    background-image: url(https://images.vivino.com/thumbs/AhfEXt94TLWm8RtO_ic43w_pb_x600.png);
 	    width: 150px;
 	    height: 800px;
 	}
 	section.fabric .deco.deco-09 {
-		bottom: -1400px;
+		bottom: -1150px;
 	    right: 1%;
 	    background-image: url(../img/kisspng-bryndza-goat-cheese-queso-blanco-feta-beyaz-peynir-5b0cf05de938f3.3247039615275746219553.png);
 		width: 300px;
