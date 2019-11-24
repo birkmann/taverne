@@ -333,7 +333,6 @@ body.scrolled header.main nav.main a:hover {
 .intro {
 	position: relative;
 	z-index: 5;
-	display: flex;
 	background: #0D5EAF;
 	color: #fff;
 }
@@ -374,7 +373,6 @@ body.scrolled header.main nav.main a:hover {
 .intro .col:first-child .bottom,
 .intro .col:last-child .bottom {
 	height: 320px;
-	display: flex;
 }
 
 .intro .col:first-child .left,
@@ -387,9 +385,20 @@ body.scrolled header.main nav.main a:hover {
 .intro .col:first-child .right,
 .intro .col:last-child .right {
 	padding: 0 5%;
-	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@media (min-width: 960px) {
+	.intro,
+	.intro .col:first-child .top,
+	.intro .col:last-child .top,
+	.intro .col:first-child .bottom,
+	.intro .col:last-child .bottom,
+	.intro .col:first-child .right,
+	.intro .col:last-child .right {
+		display: flex;
+	}
 }
 
 @media (min-width: 1600px) {
