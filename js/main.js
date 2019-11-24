@@ -106,11 +106,13 @@ function debounce(fn, wait) {
 }
 
 
-$.fn.isInViewport = function() {
+$.fn.isInViewport = function () {
 	var elementTop = $(this).offset().top;
 	var elementBottom = elementTop + $(this).outerHeight();
+
 	var viewportTop = $(window).scrollTop();
 	var viewportBottom = viewportTop + $(window).height();
+
 	return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
@@ -118,19 +120,30 @@ $(window).on('resize scroll load', function() {
 
 	parallaxHeader();
 
-	$('.parallax').each(function() {
-		var velocity = $(this).data("velocity");
-		$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px)');
-	});
+	$('.parallax-container').each(function () {
+		if ($(this).isInViewport()) {
 
-	$('.parallax-rotate').each(function() {
-		var velocity = $(this).data("velocity");
-		$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px) rotate(' + $(window).scrollTop() / (velocity*2)   + 'deg)');
-	});
+			/*
+			var scrolledInElement = $(this).offset().top - $(window).scrollTop();
+			console.log( Math.floor( $(this).offset().top) ) ;
+			*/
 
-	$('.parallax-rotate-slow').each(function() {
-		var velocity = $(this).data("velocity");
-		$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px) rotate(' + $(window).scrollTop() / (velocity*15)   + 'deg)');
+			$(this).find('.parallax').each(function() {
+				var velocity = $(this).data("velocity");
+				$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px)');
+			});
+
+			$(this).find('.parallax-rotate').each(function() {
+				var velocity = $(this).data("velocity");
+				$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px) rotate(' + $(window).scrollTop() / (velocity*2)   + 'deg)');
+			});
+
+			$(this).find('.parallax-rotate-slow').each(function() {
+				var velocity = $(this).data("velocity");
+				$(this).css('transform', 'translateY(-' + $(window).scrollTop() / velocity + 'px) rotate(' + $(window).scrollTop() / (velocity*15)   + 'deg)');
+			});
+
+		}
 	});
 
 });
