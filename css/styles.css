@@ -502,7 +502,7 @@ header.main nav.main a {
 	}
 
 	section.fabric .deco.deco-07 {
-		bottom: -1150px;
+		bottom: -1000px;
 	    left: -6%;
 	    background-image: url(https://static.thuisbezorgd.nl/images/restaurants/nl/NPPO5RO/products/deli_griek_gyros_schotel_08.png);
 		width: 400px;
@@ -577,32 +577,29 @@ header.main nav.main a {
 	padding: 5%;
 }
 
-.card .item {
-	width: 100%;
+.card .menu-item {
+	margin: 20px 40px 30px 40px;
+}
+
+.card .menu-item .top {
 	display: flex;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 8px;
 }
 
-.card .item .name {
-	font-weight: bold;
-	display: block;
-}
-
-.card .item .sub {
-	color: #888;
-	font-size: 0.9em;
-}
-
-.card .item .col {
-	width: 50%;
-}
-
-.card .item .col:last-child {
-	text-align: right;
+.card .menu-item .top h5 {
 	font-size: 1.5em;
+	margin: 0;
+}
+
+.card .menu-item .price {
+	margin-left: auto;
+	font-size: 1.5em;
+}
+
+.card .menu-item p {
+	color: #666;
+	margin: 5px 0;
 }
 
 @media (min-width: 960px) {
