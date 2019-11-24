@@ -745,6 +745,7 @@ footer.main {
     background: #fff;
     position: relative;
     z-index: 5;
+    line-height: 2em;
 }
 
 footer.main .row .col {
