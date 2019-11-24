@@ -57,17 +57,16 @@ a.logo {
 	font-family: 'Diogenes';
 	text-decoration: none;
 	color: #111;
-	margin: 20px 0 10px 0;
+	margin: 20px;
 	text-transform: uppercase;
 	display: flex;
-	transform: scale(0.8);
 	transition: color 0.25s ease-in-out;
 }
 
 a.logo .icon svg {
-	width: 60px;
-	height: auto;
-	margin-right: 20px;
+	width: 40px;
+    height: auto;
+    margin-right: 10px;
 }
 
 a.logo .icon svg path {
@@ -79,13 +78,13 @@ a.logo .icon svg g {
 }
 
 a.logo .text .main {
-	font-size: 3.5em;
-	line-height: 1em;
+	font-size: 40px;
+	line-height: 1.2em;
 	display: block;
 }
 
 a.logo .text .sub {
-	font-size: 1.25em;
+	font-size: 14px;
 	line-height: 1em;
 	display: block;
 	margin-left: -5px;
@@ -147,7 +146,7 @@ header.main nav.main a {
 	}
 	header.main nav.main a {
 		color: #fff;
-		line-height: 80px;
+		line-height: 55px;
 		padding: 20px;
 		display: inline-block;
 		width: auto;
@@ -199,8 +198,8 @@ header.main nav.main a {
 
 .stage .bar {
 	background: rgba(13, 94, 175, 0.9);
-	line-height: 1.6em;
-	padding: 5px;
+    line-height: 1.6em;
+    padding: 20px 10px;
 }
 
 .stage .bar .col {
@@ -413,7 +412,7 @@ header.main nav.main a {
 .intro .col:last-child .top,
 .intro .col:first-child .bottom,
 .intro .col:last-child .bottom {
-    min-height: 270px;
+    min-height: 225px;
     padding: 10px;
 }
 
@@ -685,19 +684,28 @@ footer.main .container {
 	max-width: 100%;
 }
 
-footer.main a.extern {
+footer.main a {
 	text-decoration: none;
+	color: #333;
+}
+
+footer.main a:hover {
+	text-decoration: underline;
+}
+
+footer.main a.extern {
 	opacity: 0.75;
 	transition: all 0.25s ease-in-out;
 	margin: 10px;
 }
 
 footer.main a.extern:hover {
+	text-decoration: none;
 	opacity: 1;
 }
 
 footer.main a.extern img {
-	max-width: 75px;
+	max-width: 50px;
 }
 
 @media (min-width: 960px) {
