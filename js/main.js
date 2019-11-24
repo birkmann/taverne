@@ -116,17 +116,13 @@ $.fn.isInViewport = function () {
 	return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+/*
 $(window).on('resize scroll load', function() {
 
 	parallaxHeader();
 
 	$('.parallax-container').each(function () {
 		if ($(this).isInViewport()) {
-
-			/*
-			var scrolledInElement = $(this).offset().top - $(window).scrollTop();
-			console.log( Math.floor( $(this).offset().top) ) ;
-			*/
 
 			$(this).find('.parallax').each(function() {
 				var velocity = $(this).data("velocity");
@@ -147,3 +143,4 @@ $(window).on('resize scroll load', function() {
 	});
 
 });
+*/
