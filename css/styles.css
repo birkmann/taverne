@@ -95,6 +95,10 @@ header.main nav {
 	display: none;
 }
 
+body.open header.main nav {
+	display: block;
+}
+
 header.main nav.main a {
 	font-family: 'Diogenes';
 	text-transform: uppercase;
@@ -163,6 +167,73 @@ header.main nav.main a {
 	body.scrolled header.main nav.main a:hover {
 		color: #0D5EAF;
 	}
+}
+
+.nav-toggle {
+	position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+@media (min-width: 960px) {
+	.nav-toggle {
+		display: none;
+	}
+}
+
+.burger {
+	width: 55px;
+    height: 45px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.burger span {
+	display: block;
+	position: absolute;
+	height: 5px;
+	width: 100%;
+	background: #444;
+	border-radius: 2px;
+	opacity: 1;
+	left: 0;
+	transition: .25s ease-in-out;
+}
+
+
+.burger span:nth-child(1) {
+	top: 0px;
+}
+
+.burger span:nth-child(2),
+.burger span:nth-child(3) {
+	top: 12px;
+}
+
+.burger span:nth-child(4) {
+	top: 24px;
+}
+
+.burger.open span:nth-child(1) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+
+.burger.open span:nth-child(2) {
+	transform: rotate(45deg);
+}
+
+.burger.open span:nth-child(3) {
+	transform: rotate(-45deg);
+}
+
+.burger.open span:nth-child(4) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
 }
 
 .stage {
